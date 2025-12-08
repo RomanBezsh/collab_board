@@ -1,10 +1,14 @@
 import styles from "./AuthPage.module.css";
 import React, { useState } from "react";
+import {AuthForm} from "../../components/AuthForm/AuthForm.jsx";
+import {useNavigate} from "react-router-dom";
 
 export function AuthPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState({ email: "", password: "" });
+
+    const navigate = useNavigate();
 
     const validateEmail = (value) => {
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -41,13 +45,24 @@ export function AuthPage() {
         if (isEmailValid && isPasswordValid) {
             console.log("Submitted:", { email, password });
             // здесь можно вызвать API для авторизации
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+            navigate("/dashboard");
         }
     };
 
     return (
         <div className={styles.authPage}>
-            <form onSubmit={handleSubmit}>
-                <h2>Sign In</h2>
+            <AuthForm
+                title='Sign In'
+                onSubmit={handleSubmit}
+                buttonText='Sign In'
+                linkData={{
+                    text: 'Don’t you have an account?',
+                    linkTo: '/sign-up',
+                    linkText: 'Sign Up now!',
+                }}
+            >
 
                 <div className={styles.formGroup}>
                     <label htmlFor="email-input">Email</label>
@@ -76,15 +91,7 @@ export function AuthPage() {
                     />
                     {errors.password && <span className={styles.errorText}>{errors.password}</span>}
                 </div>
-
-                <span className={styles.authText}>
-                  Don’t have an account? <a href="/register">Sign up now!</a>
-                </span>
-
-                <button className={styles.authButton} type="submit">
-                    Sign In
-                </button>
-            </form>
+            </AuthForm>
         </div>
     );
 }

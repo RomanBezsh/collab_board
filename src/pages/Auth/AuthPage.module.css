@@ -9,14 +9,6 @@
     gap: 30px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px; /* расстояние между всеми дочерними элементами формы */
-}
-
-
 .formGroup {
     display: flex;
     flex-direction: column;
@@ -32,29 +24,3 @@ form {
     border-radius: 16px;
 }
 
-
-.authButton {
-    color: white;
-    border: none;
-    background-color: mediumpurple;
-    transition: background-color 0.5s ease-in-out;
-    width: 100%;
-    max-width: 150px;
-    height: 40px;
-    border-radius: 16px;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.authButton:hover {
-    background-color: rgb(187, 130, 255);
-}
-
-.authText {
-    font-size: 12px;
-}
-
-.errorText {
-    color: red;
-    font-size: 14px;
-}
