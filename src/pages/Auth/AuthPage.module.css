@@ -24,3 +24,7 @@
     border-radius: 16px;
 }
 
+.errorText {
+    color: red;
+    font-size: 14px;
+}

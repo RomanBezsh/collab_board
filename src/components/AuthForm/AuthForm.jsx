@@ -1,4 +1,4 @@
-import styles from './authForm.module.css';
+import styles from './AuthForm.module.css';
 import { NavLink } from "react-router-dom";
 
 
