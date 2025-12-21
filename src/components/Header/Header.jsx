@@ -4,14 +4,14 @@ import styles from './Header.module.css';
 export function Header() {
 
     return (
-        <div className={styles.header}>
-            <nav className="navigation">
+        <header className={styles.header}>
+            <nav className={styles.navigation}>
                 <NavLink to="/dashboard">CollabBoard</NavLink>
-                <NavLink>Create</NavLink>
-                <NavLink>Notifications</NavLink>
-                <NavLink>Profile</NavLink>
+                <NavLink to="/create">Create</NavLink>
+                <NavLink to="/notifications">Notifications</NavLink>
+                <NavLink to="/profile">Profile</NavLink>
             </nav>
-        </div>
+        </header>
     );
 }
 
