@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 
 
-export function AuthForm({title, onSubmit, buttonText, linkData, children }) {
+export const AuthForm = ({title, onSubmit, buttonText, linkData, children }) => {
 
 
 

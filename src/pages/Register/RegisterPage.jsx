@@ -2,7 +2,7 @@ import styles from "../Auth/AuthPage.module.css"
 import React from "react";
 import {AuthForm} from "../../components/AuthForm/AuthForm.jsx";
 
-export function RegisterPage() {
+export const RegisterPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("RegisterPage Submitted");
