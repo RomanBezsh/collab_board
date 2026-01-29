@@ -5,6 +5,7 @@ import { RegisterPage } from "./pages/Register/RegisterPage.jsx";
 import { Dashboard } from "./pages/Dashboard/Dashboard.jsx";
 import { Notifications } from "./pages/Notifications/Notifications.jsx";
 import { Layout } from "./components/Layout/Layout.jsx";
+import {Profile} from "./pages/Profile/Profile.jsx";
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                     <Route element={<Layout />}>
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/notifications" element={<Notifications />} />
+                        <Route path="/profile" element={<Profile />} />
                     </Route>
                 </Routes>
             </div>

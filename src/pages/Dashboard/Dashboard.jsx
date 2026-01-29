@@ -1,4 +1,3 @@
-import { Header } from "../../components/Header/Header.jsx";
 import styles from "./Dashboard.module.css";
 
 export const Dashboard = () => {
